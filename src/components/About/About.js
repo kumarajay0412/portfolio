@@ -3,17 +3,20 @@ import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import "../../style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import myImg from "../../Assets/figure.png";
+import "../../style.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Tilt from "react-parallax-tilt";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 
 function About() {
   return (
-    <Container fluid className="about-section">
-      <Particle />
+    <Container fluid className="about-section" >
+     
       <Container>
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
+        <Row style={{ justifyContent: "center", padding: "10px",paddingTop: "180px", paddingBottom: "150px" }}>
           <Col
             md={7}
             style={{
@@ -27,12 +30,17 @@ function About() {
             </h1>
             <Aboutcard />
           </Col>
-          <Col
+          {/* <Col
             md={5}
             style={{ paddingTop: "120px", paddingBottom: "50px" }}
             className="about-img"
           >
             <img src={laptopImg} alt="about" className="img-fluid" />
+          </Col> */}
+          <Col md={5} className="myAvtar"   >
+            <Tilt>
+              <img src={myImg} className="img-fluid" alt="avatar" />
+            </Tilt>
           </Col>
         </Row>
         <h1 className="project-heading">
