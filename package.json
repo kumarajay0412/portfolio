@@ -3,16 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.1.5",
+    "@material-ui/icons": "^4.11.2",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
     "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.5.1",
+    "mdbreact": "^5.0.1",
     "react": "^17.0.1",
+    "react-animated-social-icons": "^1.1.0",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
     "react-github-calendar": "^2.0.2",
+    "react-icons": "^4.2.0",
     "react-parallax-tilt": "^1.4.68",
     "react-particles-js": "^3.4.1",
     "react-router-dom": "^5.2.0",
@@ -43,5 +49,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@emotion/core": "^11.0.0",
+    "@emotion/styled": "^11.1.5",
+    "react-social-icons": "^4.1.0"
   }
 }
