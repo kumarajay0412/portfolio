@@ -15,7 +15,7 @@ function Footer() {
         <Col md="4" className="footer-copywright">
           <h3>Copyright © {year} AJ</h3>
         </Col>
-        
+
       </Row>
     </Container>
   );

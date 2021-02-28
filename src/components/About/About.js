@@ -6,11 +6,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import myImg from "../../Assets/figure.png";
 import "../../style.css";
 import Tilt from "react-parallax-tilt";
-import { Icon, InlineIcon } from '@iconify/react';
-import netlifyIcon from '@iconify-icons/simple-icons/netlify';
-
 import Aboutcard from "./AboutCard";
-// import Home2 from "./Home2";
+import Form from "./Form.js";
+
 
 function About() {
   return (
@@ -31,6 +29,7 @@ function About() {
               
             </h1>
             <Aboutcard />
+      
           </Col>
           <Col md={5} className="myAvtar"   >
             <Tilt>
@@ -185,16 +184,11 @@ function About() {
           </div>
           </div>
       </Col>
-  
-          {/* <Techstack iconName="devicon-linux-plain" />
-          <Techstack iconName="cib-visual-studio-code" />
-          <Techstack iconName="cib-anaconda" />
-          <Techstack iconName="cib-postman" />
-          <Techstack iconName="cib-zeit" />
-          <Techstack iconName="cib-heroku" /> */}
         </Row>
-        {/* <Home2/> */}
-      </Container>
+              </Container>
+              <Row style={{ justifyContent: "center"}}>
+              <Form/>
+              </Row>
     </Container>
   );
 }
