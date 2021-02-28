@@ -5,11 +5,12 @@ import "../../style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import myImg from "../../Assets/figure.png";
 import "../../style.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Tilt from "react-parallax-tilt";
-import Techstack from "./Techstack";
-import Aboutcard from "./AboutCard";
+import { Icon, InlineIcon } from '@iconify/react';
+import netlifyIcon from '@iconify-icons/simple-icons/netlify';
 
+import Aboutcard from "./AboutCard";
+// import Home2 from "./Home2";
 
 function About() {
   return (
@@ -31,48 +32,168 @@ function About() {
             </h1>
             <Aboutcard />
           </Col>
-          {/* <Col
-            md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
-            className="about-img"
-          >
-            <img src={laptopImg} alt="about" className="img-fluid" />
-          </Col> */}
           <Col md={5} className="myAvtar"   >
             <Tilt>
               <img src={myImg} className="img-fluid" alt="avatar" />
             </Tilt>
           </Col>
         </Row>
+
         <h1 className="project-heading">
           Professional <strong className="purple">Skillset </strong>
         </h1>
-        <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-          <Techstack iconName="devicon-cplusplus-line" />
-          <Techstack iconName="devicon-python-plain-wordmark " />
-          <Techstack iconName="cib-pytorch" />
-          <Techstack iconName="cib-tensorflow" />
-          <Techstack iconName="devicon-javascript-plain " />
-          <Techstack iconName="devicon-nodejs-plain-wordmark " />
-          <Techstack iconName="devicon-express-original-wordmark" />
-          <Techstack iconName="devicon-react-original-wordmark" />
-          <Techstack iconName="devicon-mongodb-plain-wordmark" />
-          <Techstack iconName="devicon-git-plain-wordmark" />
-          <Techstack iconName="devicon-bootstrap-plain-wordmark" />
+        <Row style={{ justifyContent: "center", paddingBottom: "50px" , paddingRight: "100px"}}>
+        <Col xs={6} md={4} >
+        <div class="wrapper1">
+          <div class="container1" id="c01">
+          <img src="https://img.icons8.com/wired/150/000000/python.png" className="img-fluid"/>
+
+          </div>
+          </div>
+      </Col>
+      <Col xs={6} md={3} >
+        <div class="wrapper1">
+          <div class="container1" id="c01">
+          <img src="https://img.icons8.com/ios-filled/150/000000/react-native.png"/>
+          {/* <img src={IMG_2} className="img-fluid" alt="avatar" /> */}
+          {/* <i className={`${prop.iconName} tech-icon-images`}></i> */}
+          </div>
+          </div>
+      </Col>
+      <Col xs={6} md={3} >
+        <div class="wrapper1">
+          <div class="container1" id="c01">
+          <img src="https://img.icons8.com/windows/150/000000/js-squared.png"/>
+          {/* <img src={IMG_3} className="img-fluid" alt="avatar" /> */}
+          {/* <i className={`${prop.iconName} tech-icon-images`}></i> */}
+          </div>
+          </div>
+      </Col>
+      <Col xs={6} md={3} >
+        <div class="wrapper1">
+          <div class="container1" id="c01">
+          <img src="https://img.icons8.com/ios/150/000000/c-plus-plus-logo.png"/>
+          {/* <img src={IMG_4} className="img-fluid" alt="avatar" /> */}
+          {/* <i className={`${prop.iconName} tech-icon-images`}></i> */}
+          </div>
+          </div>
+      </Col>
+      <Col xs={6} md={3} >
+        <div class="wrapper1">
+          <div class="container1" id="c01">
+          <img src="https://img.icons8.com/ios-filled/150/000000/java-coffee-cup-logo--v1.png"/>
+          {/* <img src={IMG_5} className="img-fluid" alt="avatar" /> */}
+          {/* <i className={`${prop.iconName} tech-icon-images`}></i> */}
+          </div>
+          </div>
+      </Col>
+      <Col xs={6} md={3} >
+        <div class="wrapper1">
+          <div class="container1" id="c01">
+          <img src="https://img.icons8.com/windows/150/000000/nodejs.png"/>
+          {/* <img src={IMG_6} className="img-fluid" alt="avatar" /> */}
+          {/* <i className={`${prop.iconName} tech-icon-images`}></i> */}
+          </div>
+          </div>
+      </Col>
+      <Col xs={6} md={3} >
+        <div class="wrapper1">
+          <div class="container1" id="c01">
+          <img src="https://img.icons8.com/windows/150/000000/bootstrap.png"/>
+          {/* <img src={IMG_7} className="img-fluid" alt="avatar" /> */}
+          </div>
+          </div>
+      </Col>
+      <Col xs={6} md={3} >
+        <div class="wrapper1">
+          <div class="container1" id="c01">
+          <img src="https://img.icons8.com/windows/150/000000/git-squared.png"/>
+          {/* <img src={IMG_8} className="img-fluid" alt="avatar" /> */}
+          {/* <i className={`${prop.iconName} tech-icon-images`}></i> */}
+          </div>
+          </div>
+      </Col>
+      <Col xs={6} md={3} >
+        <div class="wrapper1">
+          <div class="container1" id="c01">
+          <img src="https://img.icons8.com/ios-filled/150/000000/adobe-logo.png"/>
+          {/* <img src={IMG_9} className="img-fluid" alt="avatar" /> */}
+          {/* <i className={`${prop.iconName} tech-icon-images`}></i> */}
+          </div>
+          </div>
+      </Col>
+      <Col xs={6} md={3} >
+        <div class="wrapper1">
+          <div class="container1" id="c01">
+          <img src="https://img.icons8.com/ios/150/000000/postgreesql.png"/>
+          {/* <img src={IMG_10} className="img-fluid" alt="avatar" /> */}
+          {/* <i className={`${prop.iconName} tech-icon-images`}></i> */}
+          </div>
+          </div>
+      </Col>
+  
+
+       
         </Row>
         <h1 className="project-heading">
           <strong className="purple">Tools</strong> I use
         </h1>
-        <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-          <Techstack iconName="devicon-linux-plain" />
+        <Row style={{ justifyContent: "center", paddingBottom: "50px", paddingRight: "100px"} }>
+        <Col xs={6} md={3} >
+        <div class="wrapper1">
+          <div class="container1" id="c01">
+          <img src="https://img.icons8.com/ios-filled/150/000000/visual-studio-logo.png"/>
+          {/* <img src={IMG_21} className="img-fluid" alt="avatar" /> */}
+          {/* <i className={`${prop.iconName} tech-icon-images`}></i> */}
+          </div>
+          </div>
+      </Col>
+      <Col xs={6} md={3} >
+        <div class="wrapper1">
+          <div class="container1" id="c01">
+          <img src="https://img.icons8.com/wired/150/000000/postman-api.png"/>
+          {/* <img src={IMG_22} className="img-fluid" alt="avatar" /> */}
+          {/* <i className={`${prop.iconName} tech-icon-images`}></i> */}
+          </div>
+          </div>
+      </Col>
+      <Col xs={6} md={3} >
+        <div class="wrapper1">
+          <div class="container1" id="c01">
+          <img src="https://img.icons8.com/material/150/000000/intellij-idea.png"/>
+          {/* <img src={IMG_23} className="img-fluid" alt="avatar" /> */}
+          {/* <i className={`${prop.iconName} tech-icon-images`}></i> */}
+          </div>
+          </div>
+      </Col>
+      <Col xs={6} md={3} >
+        <div class="wrapper1">
+          <div class="container1" id="c01">
+          <img src="https://img.icons8.com/windows/150/000000/pycharm.png"/>
+          {/* <img src={IMG_25} className="img-fluid" alt="avatar" /> */}
+
+          </div>
+          </div>
+      </Col>
+      <Col xs={6} md={3} >
+        <div class="wrapper1">
+          <div class="container1" id="c01">
+          <img src="https://img.icons8.com/ios-glyphs/150/000000/github.png"/>
+          {/* <Icon icon={netlifyIcon} style={{ justifyContent: "center", paddingBottom: "50px" }} /> */}
+          {/* <img src={IMG_25} className="img-fluid" alt="avatar" /> */}
+
+          </div>
+          </div>
+      </Col>
+  
+          {/* <Techstack iconName="devicon-linux-plain" />
           <Techstack iconName="cib-visual-studio-code" />
           <Techstack iconName="cib-anaconda" />
           <Techstack iconName="cib-postman" />
           <Techstack iconName="cib-zeit" />
-          <Techstack iconName="cib-heroku" />
+          <Techstack iconName="cib-heroku" /> */}
         </Row>
-        
-
+        {/* <Home2/> */}
       </Container>
     </Container>
   );

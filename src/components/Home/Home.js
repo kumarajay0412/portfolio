@@ -11,9 +11,10 @@ function Home() {
   return (
     <section>
       <Container fluid className="about-section">
+      <Particle />
         <Container className="home-content">
           <Row>
-          {/* <Particle/> */}
+          
             <Col md={7} className="home-header">
               <div style={{ padding: 50 , textAlign: "left" }}>
                 <Type1 />

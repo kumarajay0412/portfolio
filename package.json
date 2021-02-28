@@ -53,6 +53,8 @@
   "devDependencies": {
     "@emotion/core": "^11.0.0",
     "@emotion/styled": "^11.1.5",
+    "@iconify-icons/simple-icons": "^1.1.13",
+    "@iconify/react": "^1.1.4",
     "react-social-icons": "^4.1.0"
   }
 }
