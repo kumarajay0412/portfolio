@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import "../../style.css";
+import "../style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ReactDOM from 'react-dom';
 import anime from 'animejs';
@@ -150,6 +150,7 @@ class Form extends React.Component {
             </button>
           </div>
         )}
+        <h1 className="inp">Contact me</h1>
         <input className="inp" type="text" placeholder="Name"  />
         <input className="inp" type="text" placeholder="Email"  />
         <textarea className="inp" placeholder="Message"  />

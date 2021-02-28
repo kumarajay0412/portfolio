@@ -68,6 +68,15 @@ function NavBar() {
                 <i className="fab fa-codepen"></i> Projects
               </Nav.Link>
             </Nav.Item>
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/contactme"
+                onClick={() => updateExpanded(false)}
+              >
+                <i className="fab fa-codepen"></i> Contact me
+              </Nav.Link>
+            </Nav.Item>
             
             
           </Nav>

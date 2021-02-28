@@ -7,7 +7,7 @@ import myImg from "../../Assets/figure.png";
 import "../../style.css";
 import Tilt from "react-parallax-tilt";
 import Aboutcard from "./AboutCard";
-import Form from "./Form.js";
+import Form from "../Form.js";
 
 
 function About() {
@@ -186,9 +186,9 @@ function About() {
       </Col>
         </Row>
               </Container>
-              <Row style={{ justifyContent: "center"}}>
+              {/* <Row style={{ justifyContent: "center"}}>
               <Form/>
-              </Row>
+              </Row> */}
     </Container>
   );
 }

@@ -518,8 +518,14 @@ html {
   font-size: 30px;
 }
 
-h1 {
-  font-weight: 200;
-  font-size: 25px;
+.inp{
+  font-weight: 2000;
+  font-size: 20px;
   text-align: center;
+}
+.left-inner-container {
+  height:50%;
+  width:80%;
+  text-align:center;
+  line-height:22px;
 }
