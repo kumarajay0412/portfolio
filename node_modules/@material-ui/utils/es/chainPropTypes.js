@@ -1,5 +1,4 @@
-function chainPropTypes(propType1, propType2) {
-  /* istanbul ignore if */
+export default function chainPropTypes(propType1, propType2) {
   if (process.env.NODE_ENV === 'production') {
     return () => null;
   }
@@ -8,5 +7,3 @@ function chainPropTypes(propType1, propType2) {
     return propType1(...args) || propType2(...args);
   };
 }
-
-export default chainPropTypes;

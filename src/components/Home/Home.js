@@ -1,13 +1,25 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React , { useState } from "react";
+import { Container, Button,Row, Col } from "react-bootstrap";
 import "../../style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import homeLogo from "../../Assets/computer.svg";
+import sou from "../../Assets/icon.wav";
 import Particle from "../Particle";
 import {AnimatedSocialIcon} from 'react-animated-social-icons'
 import Type1 from "./Type1";
 import Tilt from "react-parallax-tilt";
+
+
+
 function Home() {
+
+ 
+  
+
+  const playSound = audioFile => {
+    const likeAudio = new Audio(sou);
+    likeAudio.play();
+}
   return (
     <section>
       <Container fluid className="about-section">
@@ -33,6 +45,7 @@ function Home() {
           <Col md={12} className="home-about-social">             
             <ul className="home-about-social-links">
               <li className="home-social-icons">
+                
                 <AnimatedSocialIcon
                     brandName="github"
                     url="https://github.com/kumarajay0412"
@@ -40,8 +53,11 @@ function Home() {
                     defaultColor="#D1D1D1"
                     hoverColor="black"
                     width="3em"
-                    animationDuration={1}              
+                    animationDuration={1} 
+                    onMouseEnter={() => playSound(sou)}
+                               
                     />
+                
               </li>
               <li className="home-social-icons">
                       <AnimatedSocialIcon 
@@ -51,7 +67,9 @@ function Home() {
                     defaultColor="#D1D1D1" 
                     hoverColor="black"
                     width="3em" 
-                    animationDuration={1}/>
+                    animationDuration={1}
+                    onMouseEnter={() => playSound(sou)}
+                    />
               </li>
               <li className="home-social-icons">
                     <AnimatedSocialIcon 
@@ -61,7 +79,9 @@ function Home() {
                     animation="bounce"
                     hoverColor="black"
                     defaultColor="#D1D1D1" 
-                    animationDuration={1}/>
+                    animationDuration={1}
+                    onMouseEnter={() => playSound(sou)}
+                    />
               </li>
               <li className="home-social-icons">
                     <AnimatedSocialIcon 
@@ -71,7 +91,8 @@ function Home() {
                     animation="bounce"
                     hoverColor="black"
                     defaultColor="#D1D1D1" 
-                    animationDuration={1}/>
+                    animationDuration={1}
+                    onMouseEnter={() => playSound(sou)}/>
               </li>
             </ul>
           </Col>

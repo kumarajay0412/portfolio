@@ -1,0 +1,2 @@
+declare const version = "0.13.11";
+export { version };

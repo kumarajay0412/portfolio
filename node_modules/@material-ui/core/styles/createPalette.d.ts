@@ -1,5 +1,12 @@
 import { Color, PaletteType } from '..';
-import { CommonColors } from '../colors/common';
+
+export {};
+// use standalone interface over typeof colors/commons
+// to enable module augmentation
+export interface CommonColors {
+  black: string;
+  white: string;
+}
 
 export type ColorPartial = Partial<Color>;
 
@@ -15,8 +22,13 @@ export interface TypeAction {
   hover: string;
   hoverOpacity: number;
   selected: string;
+  selectedOpacity: number;
   disabled: string;
+  disabledOpacity: number;
   disabledBackground: string;
+  focus: string;
+  focusOpacity: number;
+  activatedOpacity: number;
 }
 
 export interface TypeBackground {
@@ -49,6 +61,13 @@ export interface TypeObject {
   background: TypeBackground;
 }
 
+export type PaletteTonalOffset =
+  | number
+  | {
+      light: number;
+      dark: number;
+    };
+
 export const light: TypeObject;
 export const dark: TypeObject;
 
@@ -56,10 +75,13 @@ export interface Palette {
   common: CommonColors;
   type: PaletteType;
   contrastThreshold: number;
-  tonalOffset: number;
+  tonalOffset: PaletteTonalOffset;
   primary: PaletteColor;
   secondary: PaletteColor;
   error: PaletteColor;
+  warning: PaletteColor;
+  info: PaletteColor;
+  success: PaletteColor;
   grey: Color;
   text: TypeText;
   divider: TypeDivider;
@@ -71,9 +93,9 @@ export interface Palette {
       color: ColorPartial,
       mainShade?: number | string,
       lightShade?: number | string,
-      darkShade?: number | string,
-    ): void;
-    (color: PaletteColorOptions): void;
+      darkShade?: number | string
+    ): PaletteColor;
+    (color: PaletteColorOptions): PaletteColor;
   };
 }
 
@@ -83,8 +105,11 @@ export interface PaletteOptions {
   primary?: PaletteColorOptions;
   secondary?: PaletteColorOptions;
   error?: PaletteColorOptions;
+  warning?: PaletteColorOptions;
+  info?: PaletteColorOptions;
+  success?: PaletteColorOptions;
   type?: PaletteType;
-  tonalOffset?: number;
+  tonalOffset?: PaletteTonalOffset;
   contrastThreshold?: number;
   common?: Partial<CommonColors>;
   grey?: ColorPartial;

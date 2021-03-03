@@ -1,0 +1,93 @@
+import * as tfc from '@tensorflow/tfjs-core';
+import { io, ModelPredictConfig, Optimizer, Scalar, Tensor } from '@tensorflow/tfjs-core';
+import { TensorContainer } from '@tensorflow/tfjs-core/dist/tensor_types';
+import { History, ModelLoggingVerbosity } from '../base_callbacks';
+import { LossOrMetricFn, NamedTensorMap, Shape } from '../types';
+import { Container, ContainerConfig } from './container';
+import { Dataset } from './dataset_stub';
+import { ModelEvaluateDatasetConfig, ModelFitDatasetConfig } from './training_dataset';
+import { ModelFitConfig } from './training_tensors';
+export declare function isDataTensor(x: Tensor | Tensor[] | {
+    [inputName: string]: Tensor;
+} | {
+    [inputName: string]: Tensor[];
+}): boolean;
+export declare function isDataArray(x: Tensor | Tensor[] | {
+    [inputName: string]: Tensor;
+}): boolean;
+export declare function isDataDict(x: Tensor | Tensor[] | {
+    [inputName: string]: Tensor;
+}): boolean;
+export declare function standardizeInputData(data: Tensor | Tensor[] | {
+    [inputName: string]: Tensor;
+}, names: string[], shapes?: Shape[], checkBatchAxis?: boolean, exceptionPrefix?: string): Tensor[];
+export declare function checkArrayLengths(inputs: Tensor[], targets: Tensor[], weights?: Tensor[]): void;
+export interface ModelEvaluateConfig {
+    batchSize?: number;
+    verbose?: ModelLoggingVerbosity;
+    sampleWeight?: Tensor;
+    steps?: number;
+}
+export interface ModelCompileConfig {
+    optimizer: string | Optimizer;
+    loss: string | string[] | {
+        [outputName: string]: string;
+    } | LossOrMetricFn | LossOrMetricFn[] | {
+        [outputName: string]: LossOrMetricFn;
+    };
+    metrics?: string[] | {
+        [outputName: string]: string;
+    };
+}
+export declare class Model extends Container implements tfc.InferenceModel {
+    static className: string;
+    optimizer: Optimizer;
+    loss: string | string[] | {
+        [outputName: string]: string;
+    } | LossOrMetricFn | LossOrMetricFn[] | {
+        [outputName: string]: LossOrMetricFn;
+    };
+    lossFunctions: LossOrMetricFn[];
+    private feedOutputShapes;
+    private feedLossFns;
+    private collectedTrainableWeights;
+    private testFunction;
+    history: History;
+    protected stopTraining_: boolean;
+    protected isTraining: boolean;
+    metrics: string[] | {
+        [outputName: string]: string;
+    };
+    metricsNames: string[];
+    metricsTensors: Array<[LossOrMetricFn, number]>;
+    constructor(config: ContainerConfig);
+    summary(lineLength?: number, positions?: number[], printFn?: (message?: any, ...optionalParams: any[]) => void): void;
+    compile(config: ModelCompileConfig): void;
+    protected checkTrainableWeightsConsistency(): void;
+    evaluate(x: Tensor | Tensor[], y: Tensor | Tensor[], config?: ModelEvaluateConfig): Scalar | Scalar[];
+    evaluateDataset<T extends TensorContainer>(dataset: Dataset<T>, config: ModelEvaluateDatasetConfig): Promise<Scalar | Scalar[]>;
+    private checkNumSamples(ins, batchSize?, steps?, stepsName?);
+    execute(inputs: Tensor | Tensor[] | NamedTensorMap, outputs: string | string[]): Tensor | Tensor[];
+    private retrieveSymbolicTensors(symbolicTensorNames);
+    private predictLoop(ins, batchSize?, verbose?);
+    predict(x: Tensor | Tensor[], config?: ModelPredictConfig): Tensor | Tensor[];
+    predictOnBatch(x: Tensor): Tensor | Tensor[];
+    protected standardizeUserData(x: Tensor | Tensor[] | {
+        [inputName: string]: Tensor;
+    }, y: Tensor | Tensor[] | {
+        [inputName: string]: Tensor;
+    }, checkBatchAxis?: boolean, batchSize?: number): [Tensor[], Tensor[], Tensor[]];
+    private testLoop(f, ins, batchSize?, verbose?, steps?);
+    protected getDedupedMetricsNames(): string[];
+    protected makeTrainFunction(): (data: Tensor[]) => Scalar[];
+    private makeTestFunction();
+    fit(x: Tensor | Tensor[] | {
+        [inputName: string]: Tensor;
+    }, y: Tensor | Tensor[] | {
+        [inputName: string]: Tensor;
+    }, config?: ModelFitConfig): Promise<History>;
+    fitDataset<T extends TensorContainer>(dataset: Dataset<T>, config: ModelFitDatasetConfig<T>): Promise<History>;
+    protected getNamedWeights(config?: io.SaveConfig): NamedTensorMap;
+    stopTraining: boolean;
+    save(handlerOrURL: io.IOHandler | string, config?: io.SaveConfig): Promise<io.SaveResult>;
+}

@@ -1,0 +1,55 @@
+import { io, Scalar, serialization, Tensor } from '@tensorflow/tfjs-core';
+import { TensorContainer } from '@tensorflow/tfjs-core/dist/tensor_types';
+import { History } from './base_callbacks';
+import { Dataset } from './engine/dataset_stub';
+import { Layer } from './engine/topology';
+import { Model, ModelCompileConfig, ModelEvaluateConfig } from './engine/training';
+import { ModelEvaluateDatasetConfig, ModelFitDatasetConfig } from './engine/training_dataset';
+import { ModelFitConfig } from './engine/training_tensors';
+import { Kwargs, Shape } from './types';
+import { JsonDict } from './types';
+export declare function modelFromJSON(modelAndWeightsConfig: ModelAndWeightsConfig | JsonDict, customObjects?: serialization.ConfigDict): Promise<Model>;
+export interface ModelAndWeightsConfig {
+    modelTopology: JsonDict;
+    weightsManifest?: io.WeightsManifestConfig;
+    pathPrefix?: string;
+}
+export interface ModelPredictConfig {
+    batchSize?: number;
+    verbose?: boolean;
+}
+export declare function loadModelInternal(pathOrIOHandler: string | io.IOHandler, strict?: boolean): Promise<Model>;
+export declare function loadModelFromIOHandler(handler: io.IOHandler, customObjects?: serialization.ConfigDict, strict?: boolean): Promise<Model>;
+export interface SequentialConfig {
+    layers?: Layer[];
+    name?: string;
+}
+export declare class Sequential extends Model {
+    static className: string;
+    private model;
+    private _updatable;
+    constructor(config?: SequentialConfig);
+    private checkShape(layer);
+    add(layer: Layer): void;
+    pop(): void;
+    call(inputs: Tensor | Tensor[], kwargs: Kwargs): Tensor | Tensor[];
+    build(inputShape?: Shape | Shape[]): void;
+    countParams(): number;
+    summary(lineLength?: number, positions?: number[], printFn?: (message?: any, ...optionalParams: any[]) => void): void;
+    setWeights(weights: Tensor[]): void;
+    updatable: boolean;
+    evaluate(x: Tensor | Tensor[], y: Tensor | Tensor[], config?: ModelEvaluateConfig): Scalar | Scalar[];
+    evaluateDataset<T extends TensorContainer>(dataset: Dataset<T>, config: ModelEvaluateDatasetConfig): Promise<Scalar | Scalar[]>;
+    predict(x: Tensor | Tensor[], config?: ModelPredictConfig): Tensor | Tensor[];
+    predictOnBatch(x: Tensor): Tensor | Tensor[];
+    compile(config: ModelCompileConfig): void;
+    fit(x: Tensor | Tensor[] | {
+        [inputName: string]: Tensor;
+    }, y: Tensor | Tensor[] | {
+        [inputName: string]: Tensor;
+    }, config?: ModelFitConfig): Promise<History>;
+    fitDataset<T extends TensorContainer>(dataset: Dataset<T>, config: ModelFitDatasetConfig<T>): Promise<History>;
+    static fromConfig<T extends serialization.Serializable>(cls: serialization.SerializableConstructor<T>, config: serialization.ConfigDict): T;
+    stopTraining: boolean;
+    getConfig(): any;
+}

@@ -14,7 +14,9 @@ function Particle() {
           }
         },
         color: {
-          value: [ '#2EB67D', '#ECB22E', '#E01E5B', '#36C5F0' ]
+          // value: [ '#2EB67D', '#ECB22E', '#E01E5B', '#36C5F0' ]
+          
+          value: [ '#352c49', '#352c49', '#352c49', '#352c49' ]
         },
         shape: {
           type: 'circle',
@@ -55,7 +57,7 @@ function Particle() {
         line_linked: {
           enable: true,
           distance: 150,
-          color: '#808080',
+          color: '#352c49',
           opacity: 0.4,
           width: 1
         },

@@ -1,4 +1,9 @@
-export type Breakpoint = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+import { OverridableStringUnion } from '@material-ui/types';
+
+export type BreakpointDefaults = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl', true>;
+export interface BreakpointOverrides {}
+
+export type Breakpoint = OverridableStringUnion<BreakpointDefaults, BreakpointOverrides>;
 export type BreakpointValues = { [key in Breakpoint]: number };
 export const keys: Breakpoint[];
 
@@ -7,7 +12,7 @@ export interface Breakpoints {
   values: BreakpointValues;
   up: (key: Breakpoint | number) => string;
   down: (key: Breakpoint | number) => string;
-  between: (start: Breakpoint, end: Breakpoint) => string;
+  between: (start: Breakpoint | number, end: Breakpoint | number) => string;
   only: (key: Breakpoint) => string;
   width: (key: Breakpoint) => number;
 }
