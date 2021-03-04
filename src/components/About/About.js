@@ -111,9 +111,9 @@ likeAudio.play();
       
           </Col>
           <Col md={5} className="myAvtar"   >
-            <Tilt>
+            {/* <Tilt> */}
               <img src={myImg} className="img-fluid" alt="avatar" />
-            </Tilt>
+            {/* </Tilt> */}
           </Col>
         </Row>
         <Row style={{ justifyContent: "center", position: "relative",paddingBottom: "100px" }}>

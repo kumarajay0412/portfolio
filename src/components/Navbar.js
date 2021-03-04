@@ -46,7 +46,7 @@ function NavBar() {
           <Nav className="ml-auto" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                Home
+              Home
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>

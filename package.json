@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^12.6.0",
     "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
+    "bootstrap-icons": "^1.4.0",
     "font-awesome": "^4.7.0",
     "gsap": "^3.6.0",
     "handtrackjs": "0.0.13",

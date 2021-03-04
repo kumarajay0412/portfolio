@@ -329,7 +329,7 @@ html {
 
 .about-section {
   position: relative !important;
-  padding-bottom: 20px !important;
+  padding-bottom: 10px !important;
   padding-right: 20px !important;
   background-image: var(--section-background-color) !important;
   color: white !important;
