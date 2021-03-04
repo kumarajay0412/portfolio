@@ -116,7 +116,7 @@ likeAudio.play();
             </Tilt>
           </Col>
         </Row>
-        <Row style={{ justifyContent: "center", position: "relative",paddingBottom: "70px" }}>
+        <Row style={{ justifyContent: "center", position: "relative",paddingBottom: "100px" }}>
           <Col>
           <Link to="/contactme">
           <Button variant="primary"  target="_blank">
@@ -216,7 +216,7 @@ likeAudio.play();
           </div>
           </div>
       </Col>
-      <Col xs={6} md={3} >
+      <Col xs={5} md={3} >
         <div class="wrapper1" onMouseEnter={() => playSound10(beep10)}>
           <div class="container1" id="c01">
           <img src="https://img.icons8.com/ios/150/000000/postgreesql.png"/>

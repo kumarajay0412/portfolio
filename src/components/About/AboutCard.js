@@ -16,11 +16,8 @@ function AboutCard() {
       
             A passionate Full Stack Software Developer Who wants to explore every teck stack 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks.
           </p>
-
-      
-
-          <p style={{ marginBlockEnd: 0, color: "rgb(155 126 172)" }}>
-            "Going with the flow!"{" "}
+          <p style={{ marginBlockEnd: 4, color: "rgb(12,4,25)" }}>
+            "Going with the flow!"{"  "}
           </p>
           <footer className="blockquote-footer">Ajay</footer>
         </blockquote>
