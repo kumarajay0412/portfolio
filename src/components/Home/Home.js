@@ -6,19 +6,19 @@ import homeLogo from "../../Assets/computer.svg";
 import sou from "../../Assets/icon.wav";
 import Particle from "../Particle";
 import {AnimatedSocialIcon} from 'react-animated-social-icons'
-import Type1 from "./Type1";
+import Heading from "./Heading";
 import Tilt from "react-parallax-tilt";
-
+import pdf from "../../Assets/Ajay.pdf";
 
 
 function Home() {
 
- 
-  
 
   const playSound = audioFile => {
     const likeAudio = new Audio(sou);
+    
     likeAudio.play();
+    
 }
   return (
     <section>
@@ -29,7 +29,7 @@ function Home() {
           
             <Col md={7} className="home-header">
               <div style={{ padding: 50 , textAlign: "left" }}>
-                <Type1 />
+                <Heading/>
                 <div>
                 <hr className="line"/>
                 </div>
@@ -97,6 +97,8 @@ function Home() {
             </ul>
           </Col>
         </Row>
+
+    
         </Container>
         
       <br>

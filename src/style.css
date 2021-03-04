@@ -529,3 +529,6 @@ html {
   text-align:center;
   line-height:22px;
 }
+.formsize{
+  transform: scale(1.05) 
+}

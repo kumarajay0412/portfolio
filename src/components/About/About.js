@@ -1,10 +1,8 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import Particle from "../Particle";
+import { Container, Button,Row, Col } from "react-bootstrap";
 import "../../style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import myImg from "../../Assets/figure1.png";
-import "../../style.css";
 import Tilt from "react-parallax-tilt";
 import Aboutcard from "./AboutCard";
 import beep1 from "../../Assets/beep/beep1.wav";
@@ -22,7 +20,8 @@ import beep12 from "../../Assets/beep/beep12.wav";
 import beep13 from "../../Assets/beep/beep13.wav";
 import beep14 from "../../Assets/beep/beep14.wav";
 import beep15 from "../../Assets/beep/beep15.wav";
-
+import pdf from "../../Assets/Ajay.pdf";
+import { Link } from "react-router-dom";
 
 function About() {
 
@@ -95,7 +94,7 @@ likeAudio.play();
     <Container fluid className="about-section" >
      
       <Container>
-        <Row style={{ justifyContent: "center", padding: "10px",paddingTop: "180px", paddingBottom: "150px" }}>
+        <Row style={{ justifyContent: "center", padding: "10px",paddingTop: "180px", paddingBottom: "30px" }}>
           <Col
             md={7}
             style={{
@@ -116,6 +115,22 @@ likeAudio.play();
               <img src={myImg} className="img-fluid" alt="avatar" />
             </Tilt>
           </Col>
+        </Row>
+        <Row style={{ justifyContent: "center", position: "relative",paddingBottom: "70px" }}>
+          <Col>
+          <Link to="/contactme">
+          <Button variant="primary"  target="_blank">
+            <img src="https://img.icons8.com/android/22/000000/phone-disconnected.png"/>Contact me
+          </Button>
+          </Link>
+          </Col>
+          <Col>
+          <Button variant="primary" href={pdf} target="_blank">
+          <img src="https://img.icons8.com/pastel-glyph/24/000000/download--v1.png"/> Download Resume
+          </Button>
+          </Col>
+         
+         
         </Row>
 
         <h1 className="project-heading">
@@ -265,6 +280,7 @@ likeAudio.play();
           </div>
       </Col>
         </Row>
+       
               </Container>
               {/* <Row style={{ justifyContent: "center"}}>
               <Form/>

@@ -11,22 +11,13 @@ function AboutCard() {
           <p style={{ textAlign: "justify" }}>
             Hi Everyone, I am <span className="purple">Ajay kumar </span>
             from <span className="purple"> Delhi, India.</span>
-            <br />I am a 2nd year student in Computer science and design Engeneering.
             <br />
             <br />
-            Apart from coding, some other activities that I love to do!
+      
+            A passionate Full Stack Software Developer Who wants to explore every teck stack 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks.
           </p>
-          <ul>
-            <li className="about-activity">
-              <i className="far fa-hand-point-right"></i> Hanging out with friends 
-            </li>
-            <li className="about-activity">
-              <i className="far fa-hand-point-right"></i> Drawing 
-            </li>
-            <li className="about-activity">
-              <i className="far fa-hand-point-right"></i> Travelling
-            </li>
-          </ul>
+
+      
 
           <p style={{ marginBlockEnd: 0, color: "rgb(155 126 172)" }}>
             "Going with the flow!"{" "}

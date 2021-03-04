@@ -5,7 +5,6 @@ import Container from "react-bootstrap/Container";
 import "../style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../Assets/logo.png";
-import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 
 function NavBar() {
@@ -47,7 +46,7 @@ function NavBar() {
           <Nav className="ml-auto" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <i className="fas fa-home"></i> Home
+                Home
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
@@ -56,7 +55,7 @@ function NavBar() {
                 to="/about"
                 onClick={() => updateExpanded(false)}
               >
-                <i className="far fa-user"></i> About
+                About
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
@@ -65,7 +64,7 @@ function NavBar() {
                 to="/project"
                 onClick={() => updateExpanded(false)}
               >
-                <i className="fab fa-codepen"></i> Projects
+                Projects
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
@@ -74,10 +73,9 @@ function NavBar() {
                 to="/contactme"
                 onClick={() => updateExpanded(false)}
               >
-                <i className="fab fa-codepen"></i> Contact me
+                Contact me
               </Nav.Link>
             </Nav.Item>
-            
             
           </Nav>
         </Navbar.Collapse>
