@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kumarajay0412.github.io/portfolio/",
   "dependencies": {
     "@emotion/react": "^11.1.5",
     "@material-ui/core": "^4.11.3",
@@ -41,6 +42,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -69,6 +72,7 @@
     "@emotion/styled": "^11.1.5",
     "@iconify-icons/simple-icons": "^1.1.13",
     "@iconify/react": "^1.1.4",
+    "gh-pages": "^3.1.0",
     "react-social-icons": "^4.1.0"
   }
 }
