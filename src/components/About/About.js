@@ -3,7 +3,6 @@ import { Container, Button,Row, Col } from "react-bootstrap";
 import "../../style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import myImg from "../../Assets/figure1.png";
-import Tilt from "react-parallax-tilt";
 import Aboutcard from "./AboutCard";
 import beep1 from "../../Assets/beep/beep1.wav";
 import beep2 from "../../Assets/beep/beep2.wav";
