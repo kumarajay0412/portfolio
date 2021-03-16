@@ -1,5 +1,8 @@
 # portfolio
-https://user-images.githubusercontent.com/66991625/111259857-cc192f00-8645-11eb-9877-453f0ddc6c0f.mov
+
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/66991625/111260284-8ad54f00-8646-11eb-8e5b-4d10cefccf67.gif)
+
 Personal website build with React.js
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5765382a-d3aa-4ec3-8406-14312ea57015/deploy-status)](https://app.netlify.com/sites/ajaykumarportfolio1/deploys)
 
