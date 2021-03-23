@@ -8,7 +8,7 @@ import IMG_1 from "../../Assets/Projects/1.png";
 import IMG_2 from "../../Assets/Projects/2.png";
 import IMG_3 from "../../Assets/Projects/3.png";
 import IMG_4 from "../../Assets/Projects/4.png";
-
+import IMG_5 from "../../Assets/Projects/5.png";
 
 function Projects() {
   return (
@@ -67,6 +67,17 @@ function Projects() {
               description="Developed a game made on processing enviorment
               and using aurdino technology it was human interaction game which used many kind of sensors which gives input to control game movements"
               link="https://www.youtube.com/watch?v=MfDflAk9dPw&feature=youtu.be&ab_channel=AjayKumar"
+            />
+             </Tilt>
+          </Col>
+          <Col md={4} className="project-card">
+          <Tilt>
+            <ProjectCard
+              imgPath={IMG_5}
+              isBlog={false}
+              title="Memories"
+              description="Full Stack MERN Application that using React, Node.js, Express & MongoDB. The App is called Memories and it is a simple social media app that allows users to post interesting events that happened in their lives."
+              link="https://github.com/kumarajay0412/Memories-MERN"
             />
              </Tilt>
           </Col>

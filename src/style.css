@@ -28,12 +28,11 @@ html {
   width: 100%;
   height: 100%;
   z-index: 999999;
-  background-color: #D2917D;
+  background-color: #d2917d;
   background-image: url(./Assets/pre.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
-
 
 /* --------- */
 /*Scrollbar   */
@@ -64,7 +63,7 @@ html {
 /* Navbar Section  */
 /* --------- */
 .sticky {
-  background-color: #CA8664 !important;
+  background-color: #ca8664 !important;
   transition: all 0.3s ease-out 0s !important;
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
   backdrop-filter: blur(15px) !important;
@@ -133,7 +132,7 @@ html {
   .navbar {
     padding: 1rem 2rem !important;
     font-size: 1.4rem !important;
-    background-color: #0A0417 !important;
+    background-color: #0a0417 !important;
   }
   .navbar-nav .nav-item a::after {
     display: none !important;
@@ -198,19 +197,16 @@ html {
 /* Home section */
 /* --------- */
 
-
 #tsparticles {
   position: fixed !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
   width: 100%;
-  height: 100%;
- 
+  height: 90%;
 }
 
 .home-header {
   padding-top: 30px !important;
-  
 }
 .home-content {
   padding: 9rem 0 2rem !important;
@@ -218,13 +214,11 @@ html {
   text-align: left;
 }
 
-
 .Typewriter__wrapper {
   font-size: 2.3em !important;
   color: #000000 !important;
   font-weight: 600 !important;
 }
-
 
 @media (max-width: 767px) {
   .Typewriter__wrapper {
@@ -239,10 +233,7 @@ html {
 .line {
   margin: auto 2px;
   border: 2px solid rgb(0, 0, 0);
-  
-
 }
-
 
 .home-about-social {
   text-align: center !important;
@@ -264,18 +255,14 @@ html {
   color: #98e7cd;
 }
 
-
-
-
 /* --------- */
 /* Footer */
 /* --------- */
 .footer {
-  background-color:  #CA8664;
+  background-color: #ca8664;
   bottom: 0 !important;
   padding-top: 0px !important;
   padding-bottom: 10px !important ;
-
 }
 .footer-copywright {
   text-align: center !important;
@@ -287,7 +274,6 @@ html {
   margin-top: 1em !important;
   margin-bottom: 0.5em !important;
 }
-
 
 /* --------- */
 /* Projects */
@@ -320,8 +306,6 @@ html {
   overflow: hidden !important;
   box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
 }
-
-
 
 /* --------- */
 /* About */
@@ -377,7 +361,6 @@ html {
   padding-left: 1px !important;
 }
 
-
 .wrapper1 {
   position: relative;
   top: 10%;
@@ -413,7 +396,7 @@ html {
 .container1:hover {
   cursor: pointer;
   transform: rotate(0deg) scale(1) translateY(10px);
-  transition: .5s all ease;
+  transition: 0.5s all ease;
   z-index: 400;
 }
 
@@ -440,7 +423,6 @@ html {
   border: 2px solid white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-
 }
 
 #contactform input::placeholder,
@@ -518,17 +500,17 @@ html {
   font-size: 30px;
 }
 
-.inp{
+.inp {
   font-weight: 2000;
   font-size: 20px;
   text-align: center;
 }
 .left-inner-container {
-  height:50%;
-  width:80%;
-  text-align:center;
-  line-height:22px;
+  height: 50%;
+  width: 80%;
+  text-align: center;
+  line-height: 22px;
 }
-.formsize{
-  transform: scale(1.05) 
+.formsize {
+  transform: scale(1.05);
 }
