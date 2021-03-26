@@ -3,6 +3,7 @@ import Particles from "react-particles-js";
 
 function Particle() {
   return (
+    
     <Particles
       params={{
         particles: {

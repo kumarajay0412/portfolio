@@ -9,7 +9,8 @@ import IMG_2 from "../../Assets/Projects/2.png";
 import IMG_3 from "../../Assets/Projects/3.png";
 import IMG_4 from "../../Assets/Projects/4.png";
 import IMG_5 from "../../Assets/Projects/5.png";
-
+import IMG_6 from "../../Assets/Projects/6.png";
+import IMG_7 from "../../Assets/Projects/7.png";
 function Projects() {
   return (
     <Container fluid className="project-section">
@@ -81,6 +82,29 @@ function Projects() {
             />
              </Tilt>
           </Col>
+          <Col md={4} className="project-card">
+          <Tilt>
+            <ProjectCard
+              imgPath={IMG_7}
+              isBlog={false}
+              title="SACE (Sharing and celebrating experiences)"
+              description="A app to share your memories with your friends in augumented reality a way to preserve them in AR and completely dfferenet from todays social media "
+              link=""
+            />
+             </Tilt>
+          </Col>
+          <Col md={4} className="project-card">
+          <Tilt>
+            <ProjectCard
+              imgPath={IMG_6}
+              isBlog={false}
+              title="To do list"
+              description="Full Stack MERN Application that using React, Node.js, Express & MongoDB. Which allows users to make to do list of their own in which users can delete post update their tasks "
+              link="https://github.com/kumarajay0412/To_do_list-MERN-stack-project-"
+            />
+             </Tilt>
+          </Col>
+         
         </Row>
         </Container>
     </Container>
