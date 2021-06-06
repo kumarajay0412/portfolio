@@ -54,7 +54,7 @@ function Projects() {
               title="Covid-19 india tracker"
               description="A web app for getting the covid patient in your locality based on your location IT using google API in react.
               "
-              link="http://kumarajay0412.github.io/deploy/"
+              link="https://github.com/kumarajay0412/Covid-19-stats-website"
             />
           </Tilt>
           </Col>
@@ -78,7 +78,7 @@ function Projects() {
               isBlog={false}
               title="Memories"
               description="Full Stack MERN Application that using React, Node.js, Express & MongoDB. The App is called Memories and it is a simple social media app that allows users to post interesting events that happened in their lives."
-              link="https://github.com/kumarajay0412/Memories-MERN"
+              link="https://github.com/kumarajay0412/Instaclone"
             />
              </Tilt>
           </Col>
